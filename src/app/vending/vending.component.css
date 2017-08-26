@@ -1,0 +1,19 @@
+img{
+  height: 50%;
+  width: 35%;
+}
+.container{
+  height: 5vh;
+}
+
+.col-md-2 {
+  width: 16%;
+}
+
+button{
+  /*background-color: white;*/
+  color: black;
+  font-size: x-large;
+  height: 60px;
+  width: 130px;
+}

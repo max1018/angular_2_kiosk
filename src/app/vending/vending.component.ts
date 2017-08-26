@@ -12,6 +12,8 @@ import { Http, JsonpModule } from '@angular/http';
 export class VendingComponent {
   iframe: any;
   constructor() {
-    // http.get('/data')
+
+    let size = document.body.getAttribute('outerHeight');
+    console.log(size)
   }
 }
