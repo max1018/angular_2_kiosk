@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
+import {CarouselModule} from 'ngx-bootstrap'
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MaterialModule } from '@angular/material';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

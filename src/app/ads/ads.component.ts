@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {CarouselModule} from 'ngx-bootstrap'
+
 
 
 @Component({
