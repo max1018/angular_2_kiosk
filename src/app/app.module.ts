@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
-import {CarouselModule} from 'ngx-bootstrap'
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import {CarouselModule} from 'ngx-bootstrap'
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    CarouselModule.forRoot()
+    NgbModule,
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
