@@ -14,8 +14,10 @@ const PRODUCTS1: Product[] = [
   {id: 1.4, picture: '/assets/img/1-4.png', name: 'Diet Mountain Dew', price: '1.50'},
   {id: 1.5, picture: '/assets/img/1-5.png', name: 'Sierra Mist', price: '1.50'},
   {id: 1.6, picture: '/assets/img/1-6.png', name: 'Aquafina', price: '1.50'},
-  {id: 1.7, picture: '/assets/img/1-7.png', name: 'Dr.Pepper', price: '1.50'},
+  {id: 1.7, picture: '/assets/img/1-7.png', name: 'Dr. Pepper', price: '1.50'},
   {id: 1.8, picture: '/assets/img/1-8.png', name: 'Diet Dr. Pepper', price: '1.50'},
+  {id: 1.9, picture: '/assets/img/1-9.png', name: 'Powder Sugar Donettes', price: '1.50'},
+
 ]
 
 const PRODUCTS2: Product[] = [
@@ -27,6 +29,7 @@ const PRODUCTS2: Product[] = [
   {id: 2.6, picture: '/assets/img/2-6.png', name: 'Mr. Pibb', price: '1.50'},
   {id: 2.7, picture: '/assets/img/2-7.png', name: 'Diet Mr. Pibb', price: '1.50'},
   {id: 2.8, picture: '/assets/img/2-8.png', name: 'Barqs Root Beer', price: '1.50'},
+  {id: 2.9, picture: '/assets/img/2-9.png', name: 'Smores Pop Tarts', price: '1.50'},
 ]
 
 const PRODUCTS3: Product[] = [
@@ -38,6 +41,7 @@ const PRODUCTS3: Product[] = [
   {id: 3.6, picture: '/assets/img/3-6.png', name: 'Lays Sour Cream and Onion', price: '.75'},
   {id: 3.7, picture: '/assets/img/3-7.png', name: 'Cool Ranch Doritos', price: '.75'},
   {id: 3.8, picture: '/assets/img/3-8.png', name: 'Flamin` Hot Cheetohs', price: '.75'},
+  {id: 3.9, picture: '/assets/img/3-9.png', name: 'Jack Links Beef Jerky', price: '1.50'},
 ]
 
 const PRODUCTS4: Product[] = [
@@ -49,6 +53,7 @@ const PRODUCTS4: Product[] = [
   {id: 4.6, picture: '/assets/img/4-6.png', name: 'Hershey`s Milk Chocolate', price: '.75'},
   {id: 4.7, picture: '/assets/img/4-7.png', name: 'Butterfinger', price: '.75'},
   {id: 4.8, picture: '/assets/img/4-8.png', name: 'Heath Bar', price: '.75'},
+  {id: 4.9, picture: '/assets/img/4-9.png', name: 'Nutty Bars', price: '1.00'},
 ]
 
 const PRODUCTS5: Product[] = [
@@ -60,6 +65,7 @@ const PRODUCTS5: Product[] = [
   {id: 5.6, picture: '/assets/img/5-6.png', name: '100 Grand', price: '.75'},
   {id: 5.7, picture: '/assets/img/5-7.png', name: 'Twizzlers (Cherry)', price: '.75'},
   {id: 5.8, picture: '/assets/img/5-8.png', name: 'Payday', price: '.75'},
+  {id: 5.9, picture: '/assets/img/5-9.png', name: 'Oatmeal Cream Pie', price: '1.00'},
 ]
 
 const PRODUCTS6: Product[] = [
@@ -71,17 +77,7 @@ const PRODUCTS6: Product[] = [
   {id: 6.6, picture: '/assets/img/6-6.png', name: 'Orbit Peppermint Gum', price: '.50'},
   {id: 6.7, picture: '/assets/img/6-7.png', name: 'Extra Smooth Mint Gum', price: '.50'},
   {id: 6.8, picture: '/assets/img/6-8.png', name: 'Trident Spearmint Gum', price: '.50'},
-]
-
-const PRODUCTS7: Product[] = [
-  {id: 7.1, picture: '/assets/img/7-1.png', name: 'Jack Links Beef Jerky', price: '1.50'},
-  {id: 7.2, picture: '/assets/img/7-2.png', name: 'Smores Pop Tarts', price: '1.50'},
-  {id: 7.3, picture: '/assets/img/7-3.png', name: 'Powder Sugar Donettes', price: '1.50'},
-  {id: 7.4, picture: '/assets/img/7-4.png', name: 'Ding Dongs', price: '1.25'},
-  {id: 7.5, picture: '/assets/img/7-5.png', name: 'Twinkies', price: '1.25'},
-  {id: 7.6, picture: '/assets/img/7-6.png', name: 'Oatmeal Cream Pie', price: '1.00'},
-  {id: 7.7, picture: '/assets/img/7-7.png', name: 'Nutty Bars', price: '1.00'},
-  {id: 7.8, picture: '/assets/img/7-8.png', name: 'Asst. Jolly Ranchers', price: '1.00'},
+  {id: 6.9, picture: '/assets/img/6-9.png', name: 'Asst. Jolly Ranchers', price: '1.00'},
 ]
 
 @Component({
@@ -98,10 +94,12 @@ export class VendingComponent {
   products4 = PRODUCTS4;
   products5 = PRODUCTS5;
   products6 = PRODUCTS6;
-  products7 = PRODUCTS7;
-  selectedProduct: Product;
+  selectedProduct: any = {};
   onSelect(product: Product): void {
     this.selectedProduct = product;
+    let modal = document.getElementById('modal');
+    modal.style.visibility = 'true';
+    console.log(this.selectedProduct)
   }
 
   iframe: any;

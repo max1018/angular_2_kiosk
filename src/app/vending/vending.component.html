@@ -1,72 +1,61 @@
 <div class="products">
-  <div class="row-md" style="margin-top: 10px; margin-left: 50px; background-color: lightblue">
-    <div class="col-md-2"style="margin-left: -30px">
+  <div class="row-md" style="margin-top: 10px; margin-left: 0px; background-color: lightblue">
+    <div class="col-md-2">
       <div *ngFor="let product of products1"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
-    <div class="col-md-2"style="margin-left: -30px">
+    <div class="col-md-2">
       <div *ngFor="let product of products2"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
-    <div class="col-md-2"style="margin-left: -30px">
+    <div class="col-md-2">
       <div *ngFor="let product of products3"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
-    <div class="col-md-2"style="margin-left: -30px">
+    <div class="col-md-2">
       <div *ngFor="let product of products4"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
-    <div class="col-md-2"style="margin-left: -30px">
+    <div class="col-md-2">
       <div *ngFor="let product of products5"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
-    <div class="col-md-2"style="margin-left: -30px">
+    <div class="col-md-2">
       <div *ngFor="let product of products6"
            [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
-      </div>
-    </div>
-    <div class="col-md-2"style="margin-left: -30px">
-      <div *ngFor="let product of products7"
-           [class.selected]="product === selectedProduct">
-        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+        <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
       </div>
     </div>
   </div>
 </div>
-<div *ngIf="selectedProduct">
-  <div class="image" style="width: 50%; height:25%; margin-left: 275px"><img src={{selectedProduct.picture}}>
-    <div><label>price: $</label>{{selectedProduct.price}}</div>
-    <input [(ngModel)]="selectedProduct.name" placeholder="name"/>
-  </div>
 
-  <app-modal #modal1 style="margin-top: 2000px">
+  <app-modal id="modal" #modal1 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">
-        <div class="col-md-6 offset-header">
-          <h2 style="margin-left: 235px">{{selectedProduct.name}}</h2>
+        <div class="row-md-2 offset-header">
+          <h2 style="text-align: center">{{selectedProduct.name}}</h2>
         </div>
       </div>
     </div>
 
     <div class="app-modal-body">
       <div class="row">
-        <div class="col-md-6 offset-img"><img src={{selectedProduct.picture}}>
+        <div class="row-md-2 align-content-center"><img src={{selectedProduct.picture}}>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 offset-txt">
-          <h2 style="margin-left: 23px">{{selectedProduct.price}}</h2>
+        <div class="row-md-2 offset-txt">
+          <h2 style="text-align: center">{{selectedProduct.price}}</h2>
         </div>
       </div>
     </div>
@@ -86,4 +75,3 @@
     <!--<button type="button" class="btn btn-danger" (click)="modal1.hide()">Cancel</button>-->
     <!--<button type="button" class="btn btn-primary">Buy</button>-->
   </app-modal>
-</div>
