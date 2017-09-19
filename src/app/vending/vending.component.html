@@ -1,178 +1,89 @@
-
-
-<div class="container" style="height: 70%; background-color: #4d90fe">
-  <!--row 1-->
-  <div class="row" style="margin-top: 18px; margin-left: 10px;">
-     <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1-1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()">Diet Pepsi</button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1-3.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
+<div class="products">
+  <div class="row-md" style="margin-top: 10px; margin-left: 50px; background-color: lightblue">
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products1"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products2"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products3"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products4"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products5"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products6"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
+    </div>
+    <div class="col-md-2"style="margin-left: -30px">
+      <div *ngFor="let product of products7"
+           [class.selected]="product === selectedProduct">
+        <button (click)="onSelect(product)" class="img-thumbnail"><img src="{{product.picture}}"></button>
+      </div>
     </div>
   </div>
-
-     <!--row 2-->
-   <div class="row" style="margin-top: 10px; margin-left: 10px;">
-     <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-     </div>
-   </div>
-
-<!--row 3-->
-   <div class="row" style="margin-top: 10px; margin-left: 10px;">
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/3-1.png"></button>
-     </div>
-
-     <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/3-2.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/3-3.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/3-4.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/3-5.png"></button>
-     </div>
-
-     <div class="col-md-2">
-       <button (click)="modal1.show()"><img src="/assets/img/3-6.png"></button>
-     </div>
-   </div>
-
-     <!--row 4-->
-
-     <div class="row" style="margin-top: 10px; margin-left: 10px;">
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-
-       <div class="col-md-2">
-         <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-       </div>
-     </div>
-
-  <!--row 5-->
-
-  <div class="row" style="margin-top: 10px; margin-left: 10px;">
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
-
-    <div class="col-md-2">
-      <button (click)="modal1.show()"><img src="/assets/img/1.png"></button>
-    </div>
+</div>
+<div *ngIf="selectedProduct">
+  <div class="image" style="width: 50%; height:25%; margin-left: 275px"><img src={{selectedProduct.picture}}>
+    <div><label>price: $</label>{{selectedProduct.price}}</div>
+    <input [(ngModel)]="selectedProduct.name" placeholder="name"/>
   </div>
 
-   <app-modal #modal1 style="margin-top: 2000px">
-     <div class="app-modal-header">
-       <h2 style="margin-left: 235px">Pepsi</h2>
-     </div>
-
-     <div class="app-modal-body">
+  <app-modal #modal1 style="margin-top: 2000px">
+    <div class="app-modal-header">
       <div class="row">
-        <div class="col-md-6 col-md-offset-4" style="margin-left:">
-          <img src="/assets/img/1.png">
+        <div class="col-md-6 offset-header">
+          <h2 style="margin-left: 235px">{{selectedProduct.name}}</h2>
         </div>
       </div>
-       <div class="row">
-         <div class="col-md-6 col-md-offset-4">
-           <h2 style="margin-left: 23px">$1.50</h2>
-         </div>
-       </div>
-     </div>
+    </div>
 
-     <div class="app-modal-footer">
-       <div class="row">
-         <div class="col-md-12"><button type="button" class="btn btn-accent" style="width: 100%">Info</button></div>
-       </div>
+    <div class="app-modal-body">
+      <div class="row">
+        <div class="col-md-6 offset-img"><img src={{selectedProduct.picture}}>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-txt">
+          <h2 style="margin-left: 23px">{{selectedProduct.price}}</h2>
+        </div>
+      </div>
+    </div>
 
-       <div class="row">
-         <div class="col-md-12"><button type="button" class="btn btn-danger" (click)="modal1.hide()" style="width: 100%">Cancel</button></div>
-       </div>
+    <div class="app-modal-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-info btn-block" (click)="modal1.hide()">Info</button>
+          <button type="button" class="btn btn-danger btn-block" (click)="modal1.hide()">Cancel</button>
+          <button type="button" class="btn btn-primary btn-block" (click)="modal1.hide()">Buy</button>
+        </div>
+      </div>
+    </div>
 
-       <div class="row">
-         <div class="col-md-12"><button type="button" class="btn btn-primary" style="width: 100%">Buy</button></div>
-       </div>
-       <!--<button type="button" class="btn btn-accent" >Close</button>-->
-       <!--&lt;!&ndash;<button type="button" class="btn btn-default" (click)="modal2.show()">Show modal 2</button>&ndash;&gt;-->
-       <!--<button type="button" class="btn btn-danger" (click)="modal1.hide()">Cancel</button>-->
-       <!--<button type="button" class="btn btn-primary">Buy</button>-->
-   </div>
- </app-modal>
-
- </div>
+    <!--<button type="button" class="btn btn-accent" >Close</button>-->
+    <!--&lt;!&ndash;<button type="button" class="btn btn-default" (click)="modal2.show()">Show modal 2</button>&ndash;&gt;-->
+    <!--<button type="button" class="btn btn-danger" (click)="modal1.hide()">Cancel</button>-->
+    <!--<button type="button" class="btn btn-primary">Buy</button>-->
+  </app-modal>
+</div>

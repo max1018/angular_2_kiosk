@@ -1,7 +1,8 @@
 img{
-  height: 50%;
-  width: 35%;
+  height: 100%;
+  width: 100%;
 }
+
 .container{
   height: 5vh;
 }
@@ -10,10 +11,38 @@ img{
   width: 16%;
 }
 
+.offset-header{
+  left: 4%;
+}
+
+.offset-txt{
+  left: 38%;
+}
+
+.offset-img{
+  left: 25%;
+}
+
 button{
-  /*background-color: white;*/
+  background-color: black;
   color: black;
   font-size: x-large;
-  height: 60px;
+  height: 70px;
   width: 130px;
+}
+
+.btn-block{
+  width: 100%;
+}
+
+.btn-info{
+  background-color: #4d90fe;
+}
+
+.btn-danger{
+  background-color: orangered !important;
+}
+
+.btn-primary{
+  background-color: green !important;
 }
