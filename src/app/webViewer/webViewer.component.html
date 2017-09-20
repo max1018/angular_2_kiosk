@@ -6,11 +6,21 @@
   <!--<button (click)="getID()">Go</button>-->
 <!--</div>-->
 <div class="container">
-  <div class="row">
-    <div class="col-md-11"><input type="text" style="width:50%; border: 1px solid black; margin-top: 4px">
+  <div class="row" style="margin-top: 15px">
+    <div class="col-md-1" style="background-color: blue">
+      <button style="width: 90%;" (click)="goBack()">Back</button>
+    </div>
+    <div class="col-md-1" style="background-color: yellow">
+      <button style="width: 90%;" (click)="goForward()">Forward</button>
+    </div>
+    <div class="col-md-9"><input [(ngModel)]="nextUrl" type="text" style="width: 100%; border: 1px solid black;">
+    </div>
+
+    <div class="col-md-1">
+      <button style="width: 90%;" (click)="onGo()">Go</button>
     </div>
   </div>
 </div>
 <div style="height: 110%; margin-top: 5px" >
-  <iframe  id="i" [src]="'https://www.google.com' | safe" width="100%" height="100%"  style="border: none;"></iframe>
+  <iframe  id="i" [src]="url | safe" width="100%" height="100%"  style="border: none;"></iframe>
 </div>
