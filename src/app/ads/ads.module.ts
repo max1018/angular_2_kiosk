@@ -10,18 +10,16 @@ import {AdsComponent} from './ads.component'
 import {VendingComponent} from '../vending/vending.component'
 import {WebviewerComponent} from '../webViewer/webViewer.component';
 import { ModalComponent } from '../vending/model.component';
-
-
-
-
-
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     routing,
-
+    NgbModule,
+    CarouselModule.forRoot()
   ],
   declarations: [
     AdsComponent,

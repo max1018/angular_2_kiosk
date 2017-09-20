@@ -7,9 +7,9 @@ img{
   height: 5vh;
 }
 
-.col-md-2 {
-  width: 16%;
-}
+/*.col-md-2 {*/
+  /*width: 14%;*/
+/*}*/
 
 .offset-header{
   left: 4%;
@@ -24,11 +24,11 @@ img{
 }
 
 button{
-  background-color: white;
+  background-color: black;
   color: black;
   font-size: x-large;
-  height: 60px;
-  width: 120px;
+  height: 70px;
+  width: 130px;
 }
 
 .btn-block{
