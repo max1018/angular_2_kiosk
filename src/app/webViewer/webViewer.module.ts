@@ -7,6 +7,8 @@ import {WebviewerComponent} from './webViewer.component';
 import {FormsModule} from '@angular/forms';
 import {routing} from './webViewer.routing';
 import { SafePipe } from '../safe.pipe';
+import { ModalComponent } from '../vending/model.component';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 
 
@@ -15,11 +17,13 @@ import { SafePipe } from '../safe.pipe';
     CommonModule,
     FormsModule,
     routing,
-
   ],
   declarations: [
     WebviewerComponent,
-    SafePipe
+    SafePipe,
+    ModalComponent,
+    HttpModule,
+    JsonpModule
   ],
 })
-export class WebviewerModule { }
+export class WebviewerModule {}

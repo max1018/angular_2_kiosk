@@ -9,15 +9,77 @@
     <iframe  id="i" [src]="url | safe" width="100%" height="100%"  style="border: none;"></iframe>
   </div>
   <div class="container">
-      <div class="col-md-2"style="align-content: center; margin-top: 5px; margin-left: -45px">
-        <button style="width: 50%;" (click)="goBack()">Back</button>
-      </div>
-      <div class="col-md-2" style="align-content: center; margin-top: 5px; margin-left: -65px">
-        <button style="width: 75%;" (click)="goForward()">Forward</button>
-      </div>
-      <div class="col-md-6"style="align-content: center; margin-top: 5px; margin-left: -45px"><input [(ngModel)]="nextUrl" type="text" style="width: 135%; border: 1px solid black;">
-      </div>
-      <div class="col-md-2"style="align-content: center; margin-top: 5px; margin-left: 140px">
-        <button style="width: 70%;" (click)="onGo()">Go</button>
+    <div class="col-md-1"style="align-content: center; margin-top: 5px;">
+      <button style="width: 100%;" (click)="goBack()">Back</button>
+    </div>
+    <div class="col-md-1" style="align-content: center; margin-top: 5px;">
+      <button style="width: 135%;" (click)="goForward()">Forward</button>
+    </div>
+    <div class="col-md-8"style="align-content: center; margin-top: 5px;">
+      <input [(ngModel)]="nextUrl" type="text" style="width: 100%; border: 1px solid black;">
+    </div>
+    <div class="col-md-1"style="align-content: center; margin-top: 5px;">
+      <button style="width: 70%;" (click)="onGo()">Go</button>
+    </div>
+    <div class="col-md-1"style="align-content: center; margin-top: 5px">
+      <!--show directory goes here-->
+      <button style="width: 150%;" (click)="myDirectory.show()">Directory</button>
+    </div>
+  </div>
+
+<!--Show Local Map-->
+<app-modal id="myDirectory" #myDirectory style="margin-top: 2000px">
+  <div class="app-modal-header">
+    <div class="row">
+      <div class="row-md-1 offset-header">
+        <h2 style="text-align: center">WMU - Parkview Campus</h2>
       </div>
     </div>
+  </div>
+
+  <div class="app-modal-body">
+    <div class="row">
+      <div class="row-md-2 align-content-center"><img src='/assets/img/LocalMap.jpg'>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-modal-footer">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-info btn-block" (click)="myDirectory.hide()" (click)="directions.show()">Get Directions</button>
+        <button type="button" class="btn btn-danger btn-block" (click)="myDirectory.hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</app-modal>
+
+<!--Show the directions options-->
+<app-modal id="directions" #directions style="margin-top: 2000px">
+  <div class="app-modal-header">
+    <div class="row">
+      <div class="row-md-1 offset-header">
+        <h2 style="text-align: center">Campus Directions</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-modal-body">
+    <div class="row">
+      <div class="row-md-1 offset-header">
+        <h2 style="text-align: center">Choose your destination</h2>
+      </div>
+      <div class="row-md-2 align-content-center"><img src='/assets/img/LocalMap.jpg'>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-modal-footer">
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-info btn-block" (click)="directions.hide()">Go</button>
+        <button type="button" class="btn btn-danger btn-block" (click)="directions.hide()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</app-modal>
