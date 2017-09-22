@@ -5,22 +5,19 @@
   <!--<div>-->
   <!--<button (click)="getID()">Go</button>-->
 <!--</div>-->
-<div class="container">
-  <div class="row" style="margin-top: 15px">
-    <div class="col-md-1" style="background-color: blue">
-      <button style="width: 90%;" (click)="goBack()">Back</button>
-    </div>
-    <div class="col-md-1" style="background-color: yellow">
-      <button style="width: 90%;" (click)="goForward()">Forward</button>
-    </div>
-    <div class="col-md-9"><input [(ngModel)]="nextUrl" type="text" style="width: 100%; border: 1px solid black;">
-    </div>
-
-    <div class="col-md-1">
-      <button style="width: 90%;" (click)="onGo()">Go</button>
-    </div>
+  <div class style="height: 100%; margin-top: 5px" >
+    <iframe  id="i" [src]="url | safe" width="100%" height="100%"  style="border: none;"></iframe>
   </div>
-</div>
-<div style="height: 110%; margin-top: 5px" >
-  <iframe  id="i" [src]="url | safe" width="100%" height="100%"  style="border: none;"></iframe>
-</div>
+  <div class="container">
+      <div class="col-md-2"style="align-content: center; margin-top: 5px; margin-left: -45px">
+        <button style="width: 50%;" (click)="goBack()">Back</button>
+      </div>
+      <div class="col-md-2" style="align-content: center; margin-top: 5px; margin-left: -65px">
+        <button style="width: 75%;" (click)="goForward()">Forward</button>
+      </div>
+      <div class="col-md-6"style="align-content: center; margin-top: 5px; margin-left: -45px"><input [(ngModel)]="nextUrl" type="text" style="width: 135%; border: 1px solid black;">
+      </div>
+      <div class="col-md-2"style="align-content: center; margin-top: 5px; margin-left: 140px">
+        <button style="width: 70%;" (click)="onGo()">Go</button>
+      </div>
+    </div>

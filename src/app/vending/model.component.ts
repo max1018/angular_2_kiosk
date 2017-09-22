@@ -44,6 +44,10 @@ export class ModalComponent {
     setTimeout(() => this.visible = false, 300);
   }
 
+  public autoHide(): void {
+    setTimeout(() => this.hide(), 6000);
+  }
+
   public onContainerClicked(event: MouseEvent): void {
     if ((<HTMLElement>event.target).classList.contains('modal')) {
       this.hide();

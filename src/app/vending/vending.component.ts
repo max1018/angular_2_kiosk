@@ -59,7 +59,7 @@ const PRODUCTS5: Product[] = [
   {id: 5.3, picture: '/assets/img/5-3.png', name: 'Sweet Tarts', price: '.75', info: '/assets/img/5-3-info.png'},
   {id: 5.4, picture: '/assets/img/5-4.png', name: 'Skittles (Original)', price: '.75', info: '/assets/img/5-4-info.png'},
   {id: 5.5, picture: '/assets/img/5-5.png', name: 'Starburst', price: '.75', info: '/assets/img/5-5-info.png'},
-  {id: 5.6, picture: '/assets/img/5-6.png', name: 'Reeses Peanut Butter Cups', price: '.75', info: '/assets/img/5-6-info.png'},
+  {id: 5.6, picture: '/assets/img/5-6.png', name: 'Reese\'s Peanut Butter Cups', price: '.75', info: '/assets/img/5-6-info.png'},
   {id: 5.7, picture: '/assets/img/5-7.png', name: 'Rolo', price: '.75', info: '/assets/img/5-7-info.png'},
   {id: 5.8, picture: '/assets/img/5-8.png', name: 'Twizzlers', price: '.75', info: '/assets/img/5-8-info.png'},
 ]
