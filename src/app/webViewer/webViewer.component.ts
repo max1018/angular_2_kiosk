@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {onScreenKeyboard} from 'angular-on-screen-keyboard';
+
 
 @Component({
   selector: 'app-web',

@@ -12,6 +12,8 @@ import {WebviewerComponent} from '../webViewer/webViewer.component';
 import { ModalComponent } from '../vending/model.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { DynamoDB } from '../../aws.dynambo';
+
 
 @NgModule({
   imports: [
@@ -28,5 +30,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     WebviewerComponent,
     ModalComponent
   ],
+  providers:
+  [
+    DynamoDB
+  ]
 })
 export class AdsModule { }
