@@ -11,7 +11,6 @@ import { ModalComponent } from '../vending/model.component';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 
-
 @NgModule({
   imports: [
     CommonModule,

@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-
+import {Component, NgModule} from '@angular/core';
 
 @Component({
   templateUrl: 'kiosk.component.html' ,

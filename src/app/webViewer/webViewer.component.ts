@@ -4,7 +4,6 @@ import {Component} from '@angular/core';
   selector: 'app-web',
   templateUrl: 'webViewer.component.html' ,
   styleUrls: ['webViewer.component.css'],
-
 })
 
 export class WebviewerComponent {

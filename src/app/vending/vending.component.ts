@@ -119,7 +119,7 @@ const PRODUCTS6: Product[] = [
   {id: 6.7, picture: '/assets/img/Vending/products/6-7.png',
     name: 'Big Red Gum', price: '.50', info: '/assets/img/Vending/product_info/6-7-info.png'},
   {id: 6.8, picture: '/assets/img/Vending/products/6-8.png',
-    name: 'Extra Spearmint Gum', price: '.50', info: '/assets/img/Vending/product_info/product_info/6-8-info.png'},
+   name: 'Extra Spearmint Gum', price: '.50', info: '/assets/img/Vending/product_info/product_info/6-8-info.png'},
 ]
 
 @Component({

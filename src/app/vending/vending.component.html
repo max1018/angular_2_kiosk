@@ -4,37 +4,37 @@
         <div class="col-md-2">
           <div *ngFor="let product of products1"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
           </div>
         </div>
         <div class="col-md-2">
           <div *ngFor="let product of products2"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products3"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products4"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products5"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products6"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
     </div>
@@ -64,12 +64,16 @@
     <div class="app-modal-footer">
       <div class="row">
         <div class="col-md-12">
-          <button type="button" class="btn btn-info btn-block" (click)="modal1.hide()" (click)="modal2.show()">Info</button>
-          <button type="button" class="btn btn-danger btn-block" (click)="modal1.hide()">Cancel</button>
+          <button type="button" class="btn btn-info btn-block"
+                  (click)="modal1.hide()" (click)="modal2.show()"
+                  (click)="modal2.longAutoHide()" >Info</button>
+          <button type="button" class="btn btn-danger btn-block"
+                  (click)="modal1.hide()">Cancel</button>
           <button type="button" class="btn btn-primary btn-block"
                   (click)="modal1.hide()"
-                  (click)="modal3.show()">Buy</button>
-                  <!--(click)="Log Purchase"-->
+                  (click)="modal3.show()"
+                  (click)="modal3.longAutoHide()">Buy</button>
+          <!--(click)="Log Purchase"-->
         </div>
       </div>
     </div>
@@ -98,7 +102,10 @@
     <div class="app-modal-footer">
       <div class="row">
         <div class="col-md-12">
-          <button type="button" class="btn btn-primary btn-block" (click)="modal2.hide()" (click)="modal3.show()">Buy</button>
+          <button type="button" class="btn btn-primary btn-block"
+                  (click)="modal2.hide()"
+                  (click)="modal3.show()"
+                  (click)="modal3.longAutoHide()">Buy</button>
           <button type="button" class="btn btn-danger btn-block" (click)="modal2.hide()">Cancel</button>
         </div>
       </div>

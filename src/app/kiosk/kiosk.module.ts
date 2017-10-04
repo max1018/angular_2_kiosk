@@ -12,17 +12,11 @@ import {WebviewerComponent} from '../webViewer/webViewer.component';
 import { ModalComponent } from '../vending/model.component';
 import {KioskComponent} from './kiosk.component';
 
-
-
-
-
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     routing,
-
   ],
   declarations: [
     AdsComponent,
@@ -34,3 +28,4 @@ import {KioskComponent} from './kiosk.component';
   ],
 })
 export class KioskModule { }
+
