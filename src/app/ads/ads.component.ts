@@ -32,7 +32,7 @@ export class AdsComponent {
   constructor() {
     //this.item.id = "Max";
     let params = {
-      "TableName": "Asumadu",
+      "TableName": " Asumadu",
       "Item": {
         id: "201303190425",
         "Tags": {
