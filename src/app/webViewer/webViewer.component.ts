@@ -10,7 +10,7 @@ import {onScreenKeyboard} from 'angular-on-screen-keyboard';
 
 export class WebviewerComponent {
   iframe: any;
-  url: any = 'https://google.com';
+  url: any = 'https://www.google.com';
   nextUrl: string;
   urlIndex: any = 0;
   urlArr: any = [{url: 'https://google.com'}];

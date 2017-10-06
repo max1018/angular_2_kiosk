@@ -12,8 +12,8 @@ var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId:'us-east-
 var myConfig = new Config({credentials: myCredentials, region: 'us-east-1'});
 
 AWS.config.update({
-  accessKeyId: 'AKIAJBEPCA5ITV7SBRJA',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIAILSKUZESPRHIY6MA',
+  secretAccessKey: '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',
   region: 'us-east-1'
 });
 const dynamoDb = new DynamoDB.DocumentClient();
@@ -53,7 +53,8 @@ export class AdsComponent {
       },
     }
 
-    dynamoDb.put(params,function(err, data) {
+    dynamoDb.put(params,function(err, data){
+      console.log(err)
       if (err) console.log(err);
       else console.log(data);
     });
@@ -65,10 +66,10 @@ id: string = "201303190425";
 dbRead(){
     console.log("DB Read Function Running");
     let params = {
-      "TableName": "ForumName",
-      "KeyConditionExpression": "ForumName =:id",
+      "TableName": "Asumadu",
+      "KeyConditionExpression": "id =:id",
       ExpressionAttributeValues: {
-        ":id":  "Amazon DynamoDB",
+        ":id":  this.id,
       }
     }
     dynamoDb.query(params).promise().then(op =>{
