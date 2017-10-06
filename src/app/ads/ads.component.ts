@@ -32,7 +32,7 @@ export class AdsComponent {
   constructor() {
     //this.item.id = "Max";
     let params = {
-      "TableName": " Asumadu",
+      "TableName": "Asumadu",
       "Item": {
         id: "201303190425",
         "Tags": {
@@ -59,6 +59,22 @@ export class AdsComponent {
     });
     console.log(dynamoDb);
 
+    this.dbRead()
+}
+id: string = "201303190425";
+dbRead(){
+    console.log("DB Read Function Running");
+    let params = {
+      "TableName": "ForumName",
+      "KeyConditionExpression": "ForumName =:id",
+      ExpressionAttributeValues: {
+        ":id":  "Amazon DynamoDB",
+      }
+    }
+    dynamoDb.query(params).promise().then(op =>{
+      console.log(op['Items']);
+      }
+    )
 }
 }
 
