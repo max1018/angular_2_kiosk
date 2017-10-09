@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap';
-import { NgVirtualKeyboardModule } from '@protacon/ng-virtual-keyboard';
+import { Database } from './database.service';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,12 @@ import { NgVirtualKeyboardModule } from '@protacon/ng-virtual-keyboard';
     AppRoutingModule,
     MaterialModule,
     NgbModule,
-    NgVirtualKeyboardModule,
     CarouselModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    Database
+  ],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {}

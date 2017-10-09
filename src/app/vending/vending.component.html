@@ -1,47 +1,47 @@
   <div class="container" style="height: 105%; width: 100%; margin-top: 4px; background-color: #0f9d58">
     <div class="products">
-      <!--<div class="row-md" style="margin-top: 10px; margin-left: 0px; background-color: lightblue">-->
-        <!--<div class="col-md-2">-->
-          <!--<div *ngFor="let product of products1"-->
-               <!--[class.selected]="product === selectedProduct">-->
-            <!--<button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col-md-2">-->
-          <!--<div *ngFor="let product of products2"-->
-               <!--[class.selected]="product === selectedProduct">-->
-            <!--<button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="col-md-2">-->
-        <!--<div *ngFor="let product of products3"-->
-             <!--[class.selected]="product === selectedProduct">-->
-          <!--<button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="col-md-2">-->
-        <!--<div *ngFor="let product of products4"-->
-             <!--[class.selected]="product === selectedProduct">-->
-          <!--<button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="col-md-2">-->
-        <!--<div *ngFor="let product of products5"-->
-             <!--[class.selected]="product === selectedProduct">-->
-          <!--<button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div class="col-md-2">-->
-        <!--<div *ngFor="let product of products6"-->
-             <!--[class.selected]="product === selectedProduct">-->
-          <!--<button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+      <div class="row-md" style="margin-top: 10px; margin-left: 0px; background-color: lightblue">
+        <div class="col-md-2">
+          <div *ngFor="let product of products1"
+               [class.selected]="product === selectedProduct">
+            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div *ngFor="let product of products2"
+               [class.selected]="product === selectedProduct">
+            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div *ngFor="let product of products3"
+             [class.selected]="product === selectedProduct">
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div *ngFor="let product of products4"
+             [class.selected]="product === selectedProduct">
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div *ngFor="let product of products5"
+             [class.selected]="product === selectedProduct">
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div *ngFor="let product of products6"
+             [class.selected]="product === selectedProduct">
+          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!--Item menu-->
+<!--Item menu - appears when an item is selected-->
   <app-modal id="modal" #modal1 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">

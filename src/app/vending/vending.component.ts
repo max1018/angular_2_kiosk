@@ -7,6 +7,7 @@ export class Product {
   price: string;
   info: string;
 }
+
 // product id corresponds to it's col/row location in the grid
 const PRODUCTS1: Product[] = [
   {id: 1.1, picture: '/assets/img/Vending/products/1-1.png',
