@@ -58,4 +58,28 @@ export class ModalComponent {
     }
   }
 
+  public inStock(selectedProduct): boolean {
+    if (selectedProduct.count != 0)
+      return true;
+
+    else
+      return false;
+  }
+
+  public updateCount(selectedProduct, modal): void {
+    selectedProduct.count--;
+    modal.show();
+    modal.autoHide();
+  }
+
+  public showMenu(selectedProduct, modal1, modal2): void {
+    if (this.inStock(selectedProduct)){
+      modal1.show();
+      modal1.longAutoHide()
+    }
+    else {
+      modal2.show();
+      modal2.longAutoHide();
+    }
+  }
 }

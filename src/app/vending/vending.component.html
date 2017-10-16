@@ -4,44 +4,47 @@
         <div class="col-md-2">
           <div *ngFor="let product of products1"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+            <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
           </div>
         </div>
         <div class="col-md-2">
           <div *ngFor="let product of products2"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="modal1.show()" (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+            <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products3"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products4"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)"  class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products5"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)"  class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
       <div class="col-md-2">
         <div *ngFor="let product of products6"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="modal1.show()"  (click)="modal1.longAutoHide()" class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
+          <button (click)="onSelect(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)"  class="img-thumbnail" style="width: 100%"><img src="{{product.picture}}"></button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!--Item menu - appears when an item is selected-->
+  <!--**************************************************-->
+  <!--Item menu - appears when an item is selected-->
+  <!--**************************************************-->
+
   <app-modal id="modal" #modal1 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">
@@ -67,19 +70,23 @@
           <button type="button" class="btn btn-info btn-block"
                   (click)="modal1.hide()" (click)="modal2.show()"
                   (click)="modal2.longAutoHide()" >Info</button>
+
           <button type="button" class="btn btn-danger btn-block"
                   (click)="modal1.hide()">Cancel</button>
+
           <button type="button" class="btn btn-primary btn-block"
                   (click)="modal1.hide()"
                   (click)="modal3.show()"
                   (click)="modal3.longAutoHide()">Buy</button>
-          <!--(click)="Log Purchase"-->
         </div>
       </div>
     </div>
   </app-modal>
 
-<!--Info Menu-->
+  <!--**************************************************-->
+  <!--Info Menu-->
+  <!--**************************************************-->
+
   <app-modal #modal2 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">
@@ -106,13 +113,18 @@
                   (click)="modal2.hide()"
                   (click)="modal3.show()"
                   (click)="modal3.longAutoHide()">Buy</button>
-          <button type="button" class="btn btn-danger btn-block" (click)="modal2.hide()">Cancel</button>
+
+          <button type="button" class="btn btn-danger btn-block"
+                  (click)="modal2.hide()">Cancel</button>
         </div>
       </div>
     </div>
   </app-modal>
 
-<!--Buy menu-->
+  <!--**************************************************-->
+  <!--Buy menu-->
+  <!--**************************************************-->
+
   <app-modal #modal3 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">
@@ -136,15 +148,24 @@
       <div class="row">
         <div class="col-md-12">
           <h2 style="text-align: center">Please choose your payment method.</h2>
-          <button type="button" class="btn btn-primary btn-block" style="background-color: green" (click)="modal3.hide()" (click)="modal4.show()" (click)="modal4.autoHide()">Cash</button> <!--Add functionality to use cash here-->
-          <button type="button" class="btn btn-block" style="background-color: lightblue"(click)="modal3.hide()" (click)="modal4.show()"(click)="modal4.autoHide()">Credit Card</button> <!--Add functionality to use credit cards here-->
+          <button type="button" class="btn btn-primary btn-block" style="background-color: green"
+                  (click)="modal3.hide()"
+                  (click)="modal4.updateCount(selectedProduct, modal4)">Cash</button> <!--Add functionality to use cash here-->
+
+          <button type="button" class="btn btn-block" style="background-color: lightblue"
+                  (click)="modal3.hide()"
+                  (click)="modal4.updateCount(selectedProduct, modal4)">Credit Card</button> <!--Add functionality to use credit cards here-->
+
           <button type="button" class="btn btn-danger btn-block" (click)="modal3.hide()">Cancel</button>
         </div>
       </div>
     </div>
   </app-modal>
 
+  <!--**************************************************-->
   <!--Vend in progress message-->
+  <!--**************************************************-->
+
   <app-modal #modal4 style="margin-top: 2000px">
     <div class="app-modal-header">
       <div class="row">
@@ -167,7 +188,48 @@
     <div class="app-modal-footer">
       <div class="row">
         <div class="col-md-12">
-          <h2 style="text-align: center">Please see below</h2>
+          <h2 style="text-align: center">Now Vending</h2>
+        </div>
+      </div>
+    </div>
+  </app-modal>
+
+  <!--**************************************************-->
+  <!--Out of Stock menu - appears when an item is selected and is out of stock-->
+  <!--**************************************************-->
+
+  <app-modal #modal5 style="margin-top: 2000px">
+    <div class="app-modal-header">
+      <div class="row">
+        <div class="row-md-2 offset-header">
+          <h2 style="text-align: center">{{selectedProduct.name}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="app-modal-body">
+      <div class="row">
+        <div class="row-md-2 align-content-center"><img src={{selectedProduct.picture}}>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-md-2 offset-txt">
+          <h2 style="text-align: center">Price: ${{selectedProduct.price}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="app-modal-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-info btn-block"
+                  (click)="modal5.hide()" (click)="modal2.show()"
+                  (click)="modal2.longAutoHide()" >Info</button>
+
+          <button type="button" class="btn btn-danger btn-block"
+                  (click)="modal5.hide()">Cancel</button>
+
+          <div class="alert alert-danger">
+            <strong>Out of Stock</strong>
+          </div>
         </div>
       </div>
     </div>

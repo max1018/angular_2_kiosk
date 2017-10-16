@@ -4,10 +4,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule} from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {routing} from './vending.routing';
+import { FormsModule } from '@angular/forms';
+import { routing } from './vending.routing';
 import { SafePipe } from '../safe.pipe';
-import {VendingComponent} from './vending.component';
+import { VendingComponent } from './vending.component';
 import { ModalComponent } from '../vending/model.component';
 import { HttpModule, JsonpModule } from '@angular/http';
 
@@ -29,4 +29,5 @@ import { HttpModule, JsonpModule } from '@angular/http';
   ],
   bootstrap: [VendingComponent]
 })
-export class VendingModule { }
+export class VendingModule {}
+
