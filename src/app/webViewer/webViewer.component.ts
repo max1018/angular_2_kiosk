@@ -8,14 +8,28 @@ import {Component} from '@angular/core';
 })
 
 export class WebviewerComponent {
-  iframe: any;
-  url: any = 'https://www.google.com';
+ // iframe: any = document.getElementById('i');
+  url: any = 'https://gowmu.wmich.edu/' //'https://www.google.com';
   nextUrl: string;
   urlIndex: any = 0;
   urlArr: any = [{url: 'https://google.com'}];
 
+
+
+
+
   constructor() {
-  }
+    window.onbeforeunload = function (e) {
+       e = e || window.event;
+       //console.log(e);
+       if(e){
+         //e.returnValue = "Do you want to leave this page?";
+         e.returnValue = false;
+       }
+       return false;
+    }
+
+    }
 
   onGo() {
     console.log(this.nextUrl)
@@ -37,8 +51,9 @@ export class WebviewerComponent {
   }
 
   goBack() {
-    this.urlIndex = this.urlIndex - 1
-    this.url = this.urlArr[this.urlIndex].url
+    console.log('Test Works');
+    // this.urlIndex = this.urlIndex - 1
+    // this.url = this.urlArr[this.urlIndex].url
   }
 
   goForward() {

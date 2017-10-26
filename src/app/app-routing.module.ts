@@ -23,6 +23,10 @@ const routes: Routes = [
   {
   path: 'vending',
     loadChildren: 'app/vending/vending.module#VendingModule',
+  },
+  {
+    path: 'maintenance',
+    loadChildren: 'app/maintenance/maintenance.module#MaintenanceModule',
   }
 ];
 @NgModule({

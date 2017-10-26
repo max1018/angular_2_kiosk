@@ -25,6 +25,8 @@ export class VendingComponent {
   products4 = db.items.PRODUCTS4;
   products5 = db.items.PRODUCTS5;
   products6 = db.items.PRODUCTS6;
+
+
   selectedProduct: any = {};
   onSelect(product: Product): void {
     this.selectedProduct = product;
@@ -32,7 +34,14 @@ export class VendingComponent {
     modal.style.visibility = 'true';
     console.log(this.selectedProduct)
   }
-  constructor() { }
+  constructor() {
+    console.log(this.products1);
+    console.log(this.products2);
+    console.log(this.products3);
+    console.log(this.products4);
+    console.log(this.products5);
+    console.log(this.products6);
+  }
 
   countFlag: boolean = false;
   printhey(product){

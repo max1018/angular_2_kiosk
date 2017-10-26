@@ -8,7 +8,7 @@ img{
 }
 
 /*.col-md-2 {*/
-  /*width: 14%;*/
+/*width: 14%;*/
 /*}*/
 
 .offset-header{
@@ -27,7 +27,7 @@ button{
   background-color: black;
   color: black;
   font-size: x-large;
-  height: 100px;
+  height: 150px;
   width: 130px;
   margin-top: 15px;
 }
