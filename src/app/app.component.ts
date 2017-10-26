@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import {dynamoDb} from './database.service';
+//import {dynamoDb} from './database.service';
 
 @Component({
   selector: 'app-root',
@@ -469,28 +469,30 @@ export class AppComponent {
         info: '/assets/img/Vending/product_info/product_info/6-8-info.png'
       },
 }
-    dynamoDb.put(params,function(err, data){
-      console.log(err)
-      if (err) console.log(err);
-      else console.log(data);
-    });
-    console.log(dynamoDb);
-
-    this.dbRead()
+    // dynamoDb.put(params,function(err, data){
+    //   console.log(err)
+    //   if (err) console.log(err);
+    //   else console.log(data);
+    // });
+    // console.log(dynamoDb);
+    //
+    // this.dbRead()
   }
   id: string = "201303190425";
-  dbRead(){
-    console.log("DB Read Function Running");
-    let params = {
-      "TableName": "Asumadu",
-      "KeyConditionExpression": "id =:id",
-      ExpressionAttributeValues: {
-        ":id":  this.id,
-      }
-    }
-    dynamoDb.query(params).promise().then(op =>{
-        console.log(op['Items']);
-      }
-    )
-  }
+
+
+  // dbRead(){
+  //   console.log("DB Read Function Running");
+  //   let params = {
+  //     "TableName": "Asumadu",
+  //     "KeyConditionExpression": "id =:id",
+  //     ExpressionAttributeValues: {
+  //       ":id":  this.id,
+  //     }
+  //   }
+  //   dynamoDb.query(params).promise().then(op =>{
+  //       console.log(op['Items']);
+  //     }
+  //   )
+  // }
 }
