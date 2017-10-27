@@ -130,12 +130,33 @@ let db: any = {
   },
   ads:{
 
+  },
+  methods: {
+    findID: this.findID
   }
+
 }
 
 //const dynamoDb = new DynamoDB.DocumentClient();
 @Injectable()
-export class Database {}
+export class Database {
+
+  constructor(){
+    this.findID(8);
+  }
+
+  findID(id){
+    for(let i = 0; i < db.items.length;i++){
+      for(let j = 0; j < db.items[i].length;j++){
+        console.log('Running From Db Method')
+        console.log(db.item[i][j].id)
+        if(db.item[i][j].id == id){
+         return db.item[i][j];
+        }
+      }
+    }
+  }
+}
 
 
 //export { dynamoDb }

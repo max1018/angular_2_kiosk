@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {db} from '../../database.service';
-
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute} from '@angular/router'
 
 @Component({
   selector: 'update',
@@ -21,7 +20,27 @@ export class StatsComponent {
   restock: number;
   newPrice: any;
 
-  constructor(private _router: Router) {
-    console.log(this.products1)
+  params:any;
+  currentID :any;
+
+  constructor(private _router: Router, private _routeparams: ActivatedRoute) {
+    this.params = this._routeparams.params['_value'];
+    this.currentID = this.params['id'];
+    console.log(this.currentID);
+    this.findID(this.currentID)
+
+  }
+
+  findID(id){
+    console.log('In Use')
+    for(let i = 0; i < db.items.length;i++){
+      for(let j = 0; j < db.items[i].length;j++){
+        console.log(db.items[i][j]);
+        if(db.items[i][j].id == id){
+          console.log(db.items[i][j]);
+          return db.items[i][j];
+        }
+      }
+    }
   }
 }

@@ -29,7 +29,7 @@
             <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Check Statistics</button>
+            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats()">Check Statistics</button>
           </div>
           <div class="row col-md-offset-5">
             <button class="btn-menu">Change Image</button>
@@ -52,7 +52,7 @@
             <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Check Statistics</button>
+            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats()">Check Statistics</button>
           </div>
           <div class="row col-md-offset-5">
             <button class="btn-menu">Change Image</button>
@@ -69,13 +69,13 @@
                   (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img
             src="{{product.picture}}"></button>
           <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="updateStock.show()">Restock</button>
+            <button class="btn-menu" (click)="updateStock.show()" >Restock</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
+            <button class="btn-menu" (click)="onSelect(product)" (click)="changePrice.show()">Change Price</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Check Statistics</button>
+            <button class="btn-menu" (click)=" navToStats()">Check Statistics</button>
           </div>
           <div class="row col-md-offset-5">
             <button class="btn-menu">Change Image</button>
@@ -89,7 +89,7 @@
         <div *ngFor="let product of products4"
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button  (click)="printhey(product)"
-                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img src=""></button>
+                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img src="{{product.picture}}"></button>
           <div class="row col-md-offset-5">
             <button class="btn-menu" (click)="updateStock.show()">Restock</button>
           </div>
@@ -97,7 +97,7 @@
             <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Check Statistics</button>
+            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats()">Check Statistics</button>
           </div>
           <div class="row col-md-offset-5">
             <button class="btn-menu">Change Image</button>
@@ -221,10 +221,10 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer" style="padding: 50px">
     <div class="row">
-      <button class="btn btn-menu" (click)="updateStockConfirmation.show()">Confirm</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updateStockConfirmation.show()">Confirm</button>
     </div>
     <div class="row">
-      <button class="btn btn-menu" (click)="updateStock.hide()">Cancel</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updateStock.hide()">Cancel</button>
     </div>
   </div>
 </app-modal>
@@ -270,7 +270,7 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer">
     <div class="row">
-      <button style="margin-right: 50px" class="btn btn-menu" (click)="newCountModal.hide()" >Close</button>
+      <button style="margin-right: 50px" class="btn btn-menu" style="height:40px;width:150px" (click)="newCountModal.hide()" >Close</button>
     </div>
   </div>
 </app-modal>
@@ -315,10 +315,10 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer" style="padding: 50px">
     <div class="row">
-      <button class="btn btn-menu" (click)="changePriceConfirmation.show()">Confirm</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="changePriceConfirmation.show()">Confirm</button>
     </div>
     <div class="row">
-      <button class="btn btn-menu" (click)="changePrice.hide()">Cancel</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="changePrice.hide()">Cancel</button>
     </div>
   </div>
 </app-modal>
@@ -341,10 +341,10 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer">
     <div class="row">
-      <button class="btn btn-menu" (click)="updatePrice(changePriceConfirmation,changePrice,newPriceModal)">Yes</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updatePrice(changePriceConfirmation,changePrice,newPriceModal)">Yes</button>
     </div>
     <div class="row">
-      <button class="btn btn-menu" (click)="updateStockConfirmation.hide()">No</button>
+      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updateStockConfirmation.hide()">No</button>
     </div>
   </div>
 </app-modal>
@@ -368,7 +368,7 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer">
     <div class="row">
-      <button style="margin-right: 50px" class="btn btn-menu" (click)="newCountModal.hide()" >Close</button>
+      <button style="margin-right: 50px" class="btn btn-menu" style="height:40px;width:150px" (click)="newCountModal.hide()" >Close</button>
     </div>
   </div>
 </app-modal>

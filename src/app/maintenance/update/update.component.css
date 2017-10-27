@@ -1,7 +1,7 @@
-/*img{*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-/*}*/
+img{
+  height: 100%;
+  width: 100%;
+}
 
 .container{
   height: 5vh;
@@ -12,10 +12,11 @@
 /*}*/
 
 .btn-menu{
-  margin-top: 10px;
-  height: 40px;
-  width: 100px;
+  margin-top: 2px;
+  height: 20px;
+  width: 150px;
   font-size:small;
+  margin-left: -50px;
 }
 
 .offset-header{

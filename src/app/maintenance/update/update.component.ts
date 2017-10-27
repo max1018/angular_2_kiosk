@@ -90,7 +90,7 @@ export class UpdateComponent {
   }
 
   navToStats(){
-    this._router.navigate([])
+    this._router.navigate(['maintenance/stats',{id: this.selectedProduct.id}]);
   }
 
   navToItemExchange(){
