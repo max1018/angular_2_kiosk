@@ -9,6 +9,9 @@ import { MaintenanceComponent } from './maintenance.component';
 import { HttpModule, JsonpModule } from '@angular/http';
 import {UpdateComponent} from "./update/update.component";
 import { ModalComponent } from './update/model.component';
+import {ExchangeComponent} from "./item-exchange/exchange.component";
+import {ImgReplacerComponent} from "./img-replacer/newimage.component";
+import {StatsComponent} from "./item-stats/statistics.component";
 
 
 
@@ -24,10 +27,13 @@ import { ModalComponent } from './update/model.component';
   declarations: [
     MaintenanceComponent,
     UpdateComponent,
-    ModalComponent
+    ModalComponent,
+    ExchangeComponent,
+    ImgReplacerComponent,
+    StatsComponent
 
   ],
-  bootstrap: [MaintenanceComponent,UpdateComponent]
+  bootstrap: [MaintenanceComponent,UpdateComponent,ImgReplacerComponent,StatsComponent,ExchangeComponent]
 })
 export class MaintenanceModule{}
 

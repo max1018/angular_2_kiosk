@@ -1,7 +1,7 @@
-img{
-  height: 100%;
-  width: 100%;
-}
+/*img{*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+/*}*/
 
 .container{
   height: 5vh;
@@ -10,6 +10,13 @@ img{
 /*.col-md-2 {*/
 /*width: 14%;*/
 /*}*/
+
+.btn-menu{
+  margin-top: 10px;
+  height: 40px;
+  width: 100px;
+  font-size:small;
+}
 
 .offset-header{
   left: 4%;
@@ -24,7 +31,7 @@ img{
 }
 
 button{
-  background-color: black;
+
   color: black;
   font-size: x-large;
   height: 150px;
