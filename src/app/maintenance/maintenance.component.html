@@ -2,6 +2,11 @@
   <h1>Maintenance Login</h1>
   <form #login="ngForm" (ngSubmit)="onSubmit(login)" novalidate style="margin-left: 30px">
     <div class="row">
+      <div class="row" *ngIf="wrongFlag" style="margin-left: -30px">
+       <div class="col-md-3">
+         <h1 style="background-color: red">Error on login. Try again.</h1>
+       </div>
+      </div>
       <div class="row">Username</div>
       <div class="row"><input name="first" ngModel required #first="ngModel"></div>
     </div>

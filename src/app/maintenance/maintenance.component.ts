@@ -11,16 +11,24 @@ import {db} from '../database.service';
 
 
 export class MaintenanceComponent {
-
+credentials = { username: "Kiosk", password: 'Kiosk123'};
+wrongFlag: boolean = false;
   constructor(private _router:Router){}
 
   onSubmit(login){
-    console.log(login.value);
-    this._router.navigate(['maintenance/update']);
+    console.log(login.value.first);
+
+    if(login.value.first == this.credentials.username && login.value.password == this.credentials.password){
+      this._router.navigate(['maintenance/update'])
+    }else{
+      this.wrongFlag = true;
+    }
   }
 
   back(){
     this._router.navigate(['']);
   }
+
+
 }
 

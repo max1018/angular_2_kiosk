@@ -172,6 +172,7 @@ let db: any = {
       for(let i = 0; i < db.items.length;i++){
         for(let j = 0 ; j < db.items[i].products.length;j++){
           if(db.items[i].products[j].id == id){
+            console.log(i)
             return db.items[i].products[j];
           }
 
@@ -188,6 +189,9 @@ let db: any = {
         }
       }
     },
+    printhey: function(){
+      return 'hey';
+    }
 
 
   }

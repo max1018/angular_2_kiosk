@@ -21,7 +21,7 @@ export class ExchangeComponent {
 
     this.selectedProduct = db.methods.getItem(this.currentID);
 
-    console.log(this.selectedProduct)
+    console.log(db.methods.getItem(this.currentID))
 
   }
 }
