@@ -164,7 +164,7 @@ let db: any = {
       {id: 30, location: 0.0, picture: '/assets/img/Vending/products/4-5.png', count: 100,
         name: 'Sample', price: '.75', info: '/assets/img/Vending/product_info/4-5-info.png',
         maker: "WMU", catergory: "Chips",dateAdded: new Date(),numbersSold: 0, salesByDate: [],
-        alive:false,dateInactive: null, mostPopularDay: " ", leastPopularDay: " ", refillType:""}
+        alive:false,dateInactive: null, mostPopularDay: " ", leastPopularDay: "  ", refillType:""}
     ]}
     ],
   methods:{
