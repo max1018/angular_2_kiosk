@@ -19,15 +19,15 @@ export class Product {
 
 
 export class VendingComponent {
-  products1 = db.items.PRODUCTS1;
-  products2 = db.items.PRODUCTS2;
-  products3 = db.items.PRODUCTS3;
-  products4 = db.items.PRODUCTS4;
-  products5 = db.items.PRODUCTS5;
-  products6 = db.items.PRODUCTS6;
+  products1 = db.items[0].products;
+  products2 = db.items[1].products;
+  products3 = db.items[2].products;
+  products4 = db.items[3].products
+  totalCountForDay = [];
 
 
   selectedProduct: any = {};
+
   onSelect(product: Product): void {
     this.selectedProduct = product;
     let modal = document.getElementById('modal');
@@ -39,19 +39,23 @@ export class VendingComponent {
     console.log(this.products2);
     console.log(this.products3);
     console.log(this.products4);
-    console.log(this.products5);
-    console.log(this.products6);
   }
 
   countFlag: boolean = false;
   printhey(product){
-    if(product.count == 0){
+
+  }
+
+  buy(){
+    db.methods.getItem(this.selectedProduct.id);
+    if(this.selectedProduct.count == 0){
       this.countFlag = true;
     }
     else{
       this.countFlag = false;
-      product.count--;
+      this.selectedProduct.count--;
     }
+   // this.totalCountForDay[this.selectedProduct.id] =
   }
 
 }

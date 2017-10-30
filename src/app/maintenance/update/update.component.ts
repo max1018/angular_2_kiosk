@@ -12,10 +12,10 @@ import {Router} from "@angular/router";
 
 export class UpdateComponent {
   selectedProduct: any = {};
-  products1: any = db.items.PRODUCTS1;
-  products2: any = db.items.PRODUCTS2;
-  products3: any = db.items.PRODUCTS3;
-  products4: any = db.items.PRODUCTS4;
+  products1: any = db.items[0].products;
+  products2: any = db.items[1].products;
+  products3: any = db.items[2].products;
+  products4: any = db.items[3].products;
 
 
   restock: number;
@@ -93,6 +93,9 @@ export class UpdateComponent {
     this._router.navigate(['maintenance/stats',{id: this.selectedProduct.id}]);
   }
 
+  navToExchange(){
+    this._router.navigate(['maintenance/exchange',{id: this.selectedProduct.id}]);
+  }
   navToItemExchange(){
 
   }

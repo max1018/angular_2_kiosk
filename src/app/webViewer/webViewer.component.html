@@ -13,13 +13,16 @@
   </div>
 <!--Browser buttons/URL bar/Directory button-->
     <div class="container">
+      <div class="col-md-1"style="align-content: center; margin-top: 5px;">
+        <button style="width: 110%;" (click)="goToUpdate() " md-button>Maintenance</button>
+      </div>
     <div class="col-md-1"style="align-content: center; margin-top: 5px;">
       <button style="width: 110%;" (click)="goBack()">Back</button>
     </div>
     <div class="col-md-1" style="align-content: center; margin-top: 5px;">
       <button style="width: 155%;" (click)="goForward()">Forward</button>
     </div>
-    <div class="col-md-8"style="align-content: center; margin-top: 5px;">
+    <div class="col-md-7"style="align-content: center; margin-top: 5px;">
       <input [(ngModel)]="nextUrl" type="text" style="width: 100%; border: 1px solid black;">
     </div>
     <div class="col-md-1"style="align-content: center; margin-top: 5px;">

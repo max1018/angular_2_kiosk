@@ -20,8 +20,9 @@
         <div *ngFor="let product of products1"
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
-                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img
-            src="{{product.picture}}"></button>
+                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
+            <!--<img src="{{product.picture}}">-->
+          </button>
           <div class="row col-md-offset-5">
             <button class="btn-menu" (click)="updateStock.show()">Restock</button>
           </div>
@@ -35,7 +36,7 @@
             <button class="btn-menu">Change Image</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Exchange Product</button>
+            <button class="btn-menu" (click)="navToExchange()">Exchange Product</button>
           </div>
         </div>
       </div>
@@ -43,8 +44,9 @@
         <div *ngFor="let product of products2"
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
-                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img
-            src="{{product.picture}}"></button>
+                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
+            <!--<img src="{{product.picture}}">-->
+          </button>
           <div class="row col-md-offset-5">
             <button class="btn-menu" (click)="updateStock.show()">Restock</button>
           </div>
@@ -58,7 +60,7 @@
             <button class="btn-menu">Change Image</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Exchange Product</button>
+            <button class="btn-menu" (click)="navToExchange()">Exchange Product</button>
           </div>
         </div>
       </div>
@@ -66,8 +68,9 @@
         <div *ngFor="let product of products3"
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
-                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img
-            src="{{product.picture}}"></button>
+                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
+            <!--<img src="{{product.picture}}">-->
+          </button>
           <div class="row col-md-offset-5">
             <button class="btn-menu" (click)="updateStock.show()" >Restock</button>
           </div>
@@ -75,13 +78,13 @@
             <button class="btn-menu" (click)="onSelect(product)" (click)="changePrice.show()">Change Price</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)=" navToStats()">Check Statistics</button>
+            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats()">Check Statistics</button>
           </div>
           <div class="row col-md-offset-5">
             <button class="btn-menu">Change Image</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Exchange Product</button>
+            <button class="btn-menu" (click)="navToExchange()">Exchange Product</button>
           </div>
         </div>
       </div>
@@ -89,7 +92,9 @@
         <div *ngFor="let product of products4"
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button  (click)="printhey(product)"
-                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%"><img src="{{product.picture}}"></button>
+                  (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
+            <!--<img src="{{product.picture}}">-->
+          </button>
           <div class="row col-md-offset-5">
             <button class="btn-menu" (click)="updateStock.show()">Restock</button>
           </div>
@@ -103,7 +108,7 @@
             <button class="btn-menu">Change Image</button>
           </div>
           <div class="row col-md-offset-5">
-            <button class="btn-menu">Exchange Product</button>
+            <button class="btn-menu" (click)="navToExchange()">Exchange Product</button>
           </div>
         </div>
       </div>
@@ -450,9 +455,9 @@ This will be the modal that the maintenance guy options come from such as exchan
       </div>
     </div>
   </div>
-  <div class="app-modal-footer" *ngIf="countFlag">
-    <div class="alert alert-danger">
-      <strong>Out of Stock</strong>
-    </div>
-  </div>
+  <!--<div class="app-modal-footer" *ngIf="countFlag">-->
+    <!--<div class="alert alert-danger">-->
+      <!--<strong>Out of Stock</strong>-->
+    <!--</div>-->
+  <!--</div>-->
 </app-modal>

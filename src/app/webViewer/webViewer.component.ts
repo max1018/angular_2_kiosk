@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class WebviewerComponent {
 
 
 
-  constructor() {
+  constructor(private _router: Router) {
     window.onbeforeunload = function (e) {
        e = e || window.event;
        //console.log(e);
@@ -59,5 +60,9 @@ export class WebviewerComponent {
   goForward() {
     this.urlIndex = this.urlIndex + 1
     this.url = this.urlArr[this.urlIndex].url
+  }
+
+  goToUpdate(){
+    this._router.navigate(['maintenance/update']);
   }
 }

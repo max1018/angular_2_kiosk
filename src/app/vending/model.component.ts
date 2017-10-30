@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   template: `
     <div (click)="onContainerClicked($event)" class="modal fade" tabindex="-1" [ngClass]="{'in': visibleAnimate}"
          [ngStyle]="{'display': visible ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0}">
-      <div class="modal-dialog" style="margin-top:550px">
+      <div class="modal-dialog" style="margin-top:200px">
         <div class="modal-content">
           <div class="modal-header">
             <ng-content select=".app-modal-header"></ng-content>
@@ -67,7 +67,7 @@ export class ModalComponent {
   }
 
   public updateCount(selectedProduct, modal): void {
-    selectedProduct.count--;
+    //selectedProduct.count--;
     modal.show();
     modal.autoHide();
   }
