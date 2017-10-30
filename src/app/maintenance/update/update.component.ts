@@ -89,12 +89,12 @@ export class UpdateComponent {
     this._router.navigate([''])
   }
 
-  navToStats(){
-    this._router.navigate(['maintenance/stats',{id: this.selectedProduct.id}]);
+  navToStats(id){
+    this._router.navigate(['maintenance/stats',{id: id}]);
   }
 
-  navToExchange(){
-    this._router.navigate(['maintenance/exchange',{id: this.selectedProduct.id}]);
+  navToExchange(id){
+    this._router.navigate(['maintenance/exchange',{id: id}]);
   }
   navToItemExchange(){
 
