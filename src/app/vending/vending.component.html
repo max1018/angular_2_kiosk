@@ -5,7 +5,7 @@
           <div *ngFor="let product of products1"
                [class.selected]="product === selectedProduct">
             <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-              <!--<img src="{{product.picture}}">-->
+              <img src="{{product.picture}}">
             </button>
           </div>
         </div>
@@ -13,7 +13,7 @@
           <div *ngFor="let product of products2"
                [class.selected]="product === selectedProduct">
             <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-              <!--<img src="{{product.picture}}">-->
+              <img src="{{product.picture}}">
             </button>
         </div>
       </div>
@@ -21,7 +21,7 @@
         <div *ngFor="let product of products3"
              [class.selected]="product === selectedProduct">
           <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
         </div>
       </div>
@@ -29,7 +29,7 @@
         <div *ngFor="let product of products4"
              [class.selected]="product === selectedProduct">
           <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
         </div>
       </div>

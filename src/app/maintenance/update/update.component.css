@@ -13,10 +13,10 @@ img{
 
 .btn-menu{
   margin-top: 2px;
-  height: 20px;
+  height: 60px;
   width: 150px;
   font-size:small;
-  margin-left: -50px;
+  margin-left: -60px;
 }
 
 .offset-header{
@@ -32,7 +32,6 @@ img{
 }
 
 button{
-
   color: black;
   font-size: x-large;
   height: 150px;

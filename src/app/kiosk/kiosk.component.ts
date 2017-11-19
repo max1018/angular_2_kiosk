@@ -1,4 +1,6 @@
 import {Component, NgModule} from '@angular/core';
+import {Database} from "../database.service";
+
 
 @Component({
   templateUrl: 'kiosk.component.html' ,
@@ -7,4 +9,9 @@ import {Component, NgModule} from '@angular/core';
 
 export class KioskComponent {
   iframe: any;
+
+  constructor(private db:Database){
+  //  db.makeDatabase();
+  }
+
 }

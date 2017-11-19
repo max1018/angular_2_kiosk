@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {db} from '../database.service';
+import {db, Database} from '../database.service';
 export class Product {
   id: number;
   picture: string;
@@ -19,10 +19,10 @@ export class Product {
 
 
 export class VendingComponent {
-  products1 = db.items[0].products;
-  products2 = db.items[1].products;
-  products3 = db.items[2].products;
-  products4 = db.items[3].products
+  products1:any = [];
+  products2:any = [];
+  products3:any = [];
+  products4:any = [];
   totalCountForDay = [];
 
 
@@ -34,7 +34,9 @@ export class VendingComponent {
     modal.style.visibility = 'true';
     console.log(this.selectedProduct)
   }
-  constructor() {
+  constructor(private _dbService: Database) {
+    //console.log(db.items[0])
+    this.itemDivider();
     console.log(this.products1);
     console.log(this.products2);
     console.log(this.products3);
@@ -47,15 +49,25 @@ export class VendingComponent {
   }
 
   buy(){
-    db.methods.getItem(this.selectedProduct.id);
-    if(this.selectedProduct.count == 0){
-      this.countFlag = true;
-    }
-    else{
-      this.countFlag = false;
-      this.selectedProduct.count--;
-    }
+    this._dbService.buy(this.selectedProduct);
    // this.totalCountForDay[this.selectedProduct.id] =
+  }
+
+  itemDivider(){
+    for(let i = 0; i < db.items.length;i++ ){
+      if(i < 5){
+        this.products1.push(db.items[i]);
+      }
+      if(i >4 && i < 10){
+        this.products2.push(db.items[i]);
+      }
+      if(i >9 && i < 15){
+        this.products3.push(db.items[i]);
+      }
+      if(i >15 && i < 21){
+        this.products4.push(db.items[i]);
+      }
+    }
   }
 
 }

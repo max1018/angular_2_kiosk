@@ -2,7 +2,7 @@
  <div class="row"> <h1 style="margin-top: -85px">Kiosk Update Page</h1></div>
   <div class="row" style="padding:10px; border: 1px solid blue">
     <div class="col-md-3">
-      <button style="height: 50px; width: 100%" class="btn" (click)="backToVending()">Back</button>
+      <button style="height: 50px; width: 100%" class="btn" (click)="backToVending()">Back To Vending</button>
     </div>
     <div class="col-md-3">
       <button style="height: 50px; width: 100%" class="btn">Login</button>
@@ -21,23 +21,23 @@
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
                   (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="updateStock.show()">Restock</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu">Change Image</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>
-          </div>
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="updateStock.show()">Restock</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="changePrice.show()">Change Price</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu">Change Image</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>-->
+          <!--</div>-->
         </div>
       </div>
       <div class="col-md-3">
@@ -45,23 +45,23 @@
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
                   (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="updateStock.show()">Restock</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu">Change Image</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>
-          </div>
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="updateStock.show()">Restock</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="changePrice.show()">Change Price</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu">Change Image</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>-->
+          <!--</div>-->
         </div>
       </div>
       <div class="col-md-3">
@@ -69,23 +69,23 @@
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button (click)="printhey(product)"
                   (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="updateStock.show()" >Restock</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="onSelect(product)" (click)="changePrice.show()">Change Price</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu">Change Image</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>
-          </div>
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="updateStock.show()" >Restock</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="onSelect(product)" (click)="changePrice.show()">Change Price</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu">Change Image</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>-->
+          <!--</div>-->
         </div>
       </div>
       <div class="col-md-3">
@@ -93,23 +93,23 @@
              [class.selected]="product === selectedProduct" (click)="onSelect(product)" style="border: 1px solid lightgray;padding: 5px; margin-top: 5px">
           <button  (click)="printhey(product)"
                   (click)="modal1.showMenu(selectedProduct, modal1, modal5)" style="width: 100%">
-            <!--<img src="{{product.picture}}">-->
+            <img src="{{product.picture}}">
           </button>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="updateStock.show()">Restock</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="changePrice.show()">Change Price</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu">Change Image</button>
-          </div>
-          <div class="row col-md-offset-5">
-            <button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>
-          </div>
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="updateStock.show()">Restock</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="changePrice.show()">Change Price</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="onSelect(product)" (click)=" navToStats(product.id)">Check Statistics</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu">Change Image</button>-->
+          <!--</div>-->
+          <!--<div class="row col-md-offset-5">-->
+            <!--<button class="btn-menu" (click)="navToExchange(product.id)">Exchange Product</button>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
@@ -149,29 +149,29 @@ This will be the modal that the maintenance guy options come from such as exchan
     </div>
   </div>
   <div class="app-modal-footer">
+    <!--<div class="row">-->
+      <!--<div class="col-md-12">-->
+        <!--<button class="btn btn-info btn-block" (click)="updateStock.show()">Update Stock</button>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-12">-->
+        <!--<button class="btn btn-info btn-block" (click)="changePrice.show()">Change Price</button>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="row">
       <div class="col-md-12">
-        <button class="btn btn-info btn-block" (click)="updateStock.show()">Update Stock</button>
+        <button class="btn btn-info btn-block" (click)=" navToStats(selectedProduct.id)">Check Statistics</button>
       </div>
     </div>
+    <!--<div class="row">-->
+      <!--<div class="col-md-12">-->
+        <!--<button class="btn btn-info btn-block">Change Image</button>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="row">
       <div class="col-md-12">
-        <button class="btn btn-info btn-block" >Change Price</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn btn-info btn-block">Check Statistics</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn btn-info btn-block">Change Image</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <button class="btn btn-info btn-block">Exchange Product</button>
+        <button class="btn btn-info btn-block" (click)="navToExchange(selectedProduct.id)" >Exchange Product</button>
       </div>
     </div>
 
@@ -220,7 +220,7 @@ This will be the modal that the maintenance guy options come from such as exchan
     </div>
     <form #stock="ngForm" (ngSubmit)="setRestock(stock)" style="padding: 5px;">
       <div class="row"><h2>Enter New Quantity:</h2></div>
-      <div class="row"><input name="newStock" required [(ngModel)]="restock"
+      <div class="row"><input type="number" name="newStock" required [(ngModel)]="restock"
                               style="border: 2px solid black; height:100px; width: 100%;font-size: 60px"></div>
     </form>
   </div>
@@ -314,7 +314,7 @@ This will be the modal that the maintenance guy options come from such as exchan
     </div>
     <form #stock="ngForm" (ngSubmit)="setRestock(stock)" style="padding: 5px;">
       <div class="row"><h2>Enter New Price:</h2></div>
-      <div class="row"><input name="newStock" required [(ngModel)]="newPrice"
+      <div class="row"><input type="number" name="newStock" required [(ngModel)]="newPrice"
                               style="border: 2px solid black; height:100px; width: 100%;font-size: 60px"></div>
     </form>
   </div>
@@ -345,11 +345,11 @@ This will be the modal that the maintenance guy options come from such as exchan
     </div>
   </div>
   <div class="app-modal-footer">
-    <div class="row">
-      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updatePrice(changePriceConfirmation,changePrice,newPriceModal)">Yes</button>
+    <div class="row" style="height:150px">
+      <button class="btn btn-menu" style="width:150px" (click)="updatePrice(changePriceConfirmation,changePrice,newPriceModal)">Yes</button>
     </div>
-    <div class="row">
-      <button class="btn btn-menu" style="height:40px;width:150px" (click)="updateStockConfirmation.hide()">No</button>
+    <div class="row" style="height:150px">
+      <button class="btn btn-menu" style="height:150px;width:150px" (click)="updateStockConfirmation.hide()">No</button>
     </div>
   </div>
 </app-modal>
@@ -373,7 +373,7 @@ This will be the modal that the maintenance guy options come from such as exchan
   </div>
   <div class="app-modal-footer">
     <div class="row">
-      <button style="margin-right: 50px" class="btn btn-menu" style="height:40px;width:150px" (click)="newCountModal.hide()" >Close</button>
+      <button style="margin-right: 50px" class="btn btn-menu" style="height:40px;width:150px" (click)="newPriceModal.hide()" >Close</button>
     </div>
   </div>
 </app-modal>

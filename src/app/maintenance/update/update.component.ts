@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {db} from '../../database.service';
+import {Database, db} from '../../database.service';
 
 import {Router} from "@angular/router";
 
@@ -12,16 +12,17 @@ import {Router} from "@angular/router";
 
 export class UpdateComponent {
   selectedProduct: any = {};
-  products1: any = db.items[0].products;
-  products2: any = db.items[1].products;
-  products3: any = db.items[2].products;
-  products4: any = db.items[3].products;
+  products1: any = [];
+  products2: any = [];
+  products3: any = [];
+  products4: any = [];
 
 
   restock: number;
   newPrice:any;
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private _dbService:Database) {
+    this.itemDivider();
     console.log(this.products1)
   }
 
@@ -43,16 +44,18 @@ export class UpdateComponent {
 
   restockConfirm(modal1, modal2, modal3) {
     this.selectedProduct.count = this.restock;
-    this.updateCountnInDB();
+    //this.updateCountnInDB();
+    this._dbService.restock(this.selectedProduct,this.restock);
 
     modal1.hide();
     modal2.hide();
     modal3.show();
+    console.log(modal3);
   }
 
   updatePrice(modal1,modal2,modal3){
     this.selectedProduct.price = this.newPrice;
-    this.updatePricenInDB();
+    this._dbService.changePrice(this.selectedProduct,this.newPrice);
 
     modal1.hide();
     modal2.hide();
@@ -65,7 +68,7 @@ export class UpdateComponent {
 
   updateCountnInDB(){
     for(let i = 0; i < db.items.length;i++){
-      for(let j = 0; j < db.item[i].length;j++){
+      for(let j = 0; j < db.items[i].length;j++){
 
         if(db.item[i][j].id == this.selectedProduct.id){
           db.item[i][j].count = this.selectedProduct.count;
@@ -76,7 +79,7 @@ export class UpdateComponent {
 
   updatePricenInDB(){
     for(let i = 0; i < db.items.length;i++){
-      for(let j = 0; j < db.item[i].length;j++){
+      for(let j = 0; j < db.items[i].length;j++){
 
         if(db.item[i][j].id == this.selectedProduct.id){
           db.item[i][j].count = this.selectedProduct.count;
@@ -102,6 +105,23 @@ export class UpdateComponent {
 
   navToImgReplacer(){
 
+  }
+
+  itemDivider(){
+    for(let i = 0; i < db.items.length;i++ ){
+      if(i < 5){
+        this.products1.push(db.items[i]);
+      }
+      if(i >4 && i < 10){
+        this.products2.push(db.items[i]);
+      }
+      if(i >9 && i < 15){
+        this.products3.push(db.items[i]);
+      }
+      if(i >15 && i < 21){
+        this.products4.push(db.items[i]);
+      }
+    }
   }
 
 }

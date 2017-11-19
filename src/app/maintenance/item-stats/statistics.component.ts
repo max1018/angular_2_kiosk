@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {db} from '../../database.service';
 import {Router, ActivatedRoute} from '@angular/router'
+import {MacAddress} from "aws-sdk/clients/sms";
 
 @Component({
   selector: 'update',
@@ -11,10 +12,10 @@ import {Router, ActivatedRoute} from '@angular/router'
 
 export class StatsComponent {
   selectedProduct: any = {};
-  products1: any = db.items[0].prodcuts;
-  products2: any = db.items[1].prodcuts;
-  products3: any = db.items[2].prodcuts;
-  products4: any = db.items[3].prodcuts;
+  products1: any = [];
+  products2: any = [];
+  products3: any = [];
+  products4: any = [];
 
   restock: number;
   newPrice: any;
@@ -26,6 +27,7 @@ export class StatsComponent {
   today = new Date();
 
   constructor(private _router: Router, private _routeparams: ActivatedRoute) {
+    this.itemDivider();
     console.log(this.today)
     this.params = this._routeparams.params['_value'];
     this.currentID = this.params['id'];
@@ -33,24 +35,26 @@ export class StatsComponent {
     this.findID();
     this.parseLocation();
 
+    console.log()
+
     console.log('Testing DB Stored Methods');
-    console.log(db.methods.getItem(0));
+    //console.log(db.methods.getItem(0));
 
   }
 
   findID(){
     console.log('In Use')
-    console.log( db.items[0].products.length);
+    console.log( db.items);
     // console.log(db.items[0].products)
     for(let i = 0; i < db.items.length;i++){
-      for(let j = 0 ; j < db.items[i].products.length;j++){
+      //for(let j = 0 ; j < db.items[i].products.length;j++){
 
-        if(db.items[i].products[j].id == this.currentID){
-          console.log(db.items[i].products[j]);
-          this.currentItem = db.items[i].products[j];
+        if(db.items[i].id == this.currentID){
+          console.log(db.items[i]);
+          this.currentItem = db.items[i];
         }
 
-      }
+      //}
     }
   }
 
@@ -59,5 +63,24 @@ export class StatsComponent {
     console.log(loc.substring(2,3));
     this.location.col = loc.substring(2,3);
     this.location.row = loc.substring(0,1);
+  }
+  backButton(){
+    this._router.navigate(['maintenance/update']);
+  }
+  itemDivider(){
+    for(let i = 0; i < db.items.length;i++ ){
+      if(i < 5){
+        this.products1.push(db.items[i]);
+      }
+      if(i >4 && i < 10){
+        this.products2.push(db.items[i]);
+      }
+      if(i >9 && i < 15){
+        this.products3.push(db.items[i]);
+      }
+      if(i >15 && i < 21){
+        this.products4.push(db.items[i]);
+      }
+    }
   }
 }
