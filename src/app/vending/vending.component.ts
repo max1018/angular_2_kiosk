@@ -36,7 +36,7 @@ export class VendingComponent {
   }
   constructor(private _dbService: Database) {
     //console.log(db.items[0])
-    this.itemDivider();
+    setTimeout(5000000000000,this.itemDivider());
     console.log(this.products1);
     console.log(this.products2);
     console.log(this.products3);

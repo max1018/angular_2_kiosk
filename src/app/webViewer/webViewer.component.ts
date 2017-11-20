@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 
 export class WebviewerComponent {
  // iframe: any = document.getElementById('i');
-  url: any = 'https://gowmu.wmich.edu/' //'https://www.google.com';
+  url: any = 'https://www.google.com/' //'https://www.google.com';
   nextUrl: string;
   urlIndex: any = 0;
   urlArr: any = [{url: 'https://google.com'}];
@@ -23,11 +23,11 @@ export class WebviewerComponent {
     window.onbeforeunload = function (e) {
        e = e || window.event;
        //console.log(e);
-       if(e){
+       //if(e){
          //e.returnValue = "Do you want to leave this page?";
-         e.returnValue = false;
-       }
-       return false;
+       //  e.returnValue = false;
+     //  }
+       return true;
     }
 
     }
@@ -63,6 +63,6 @@ export class WebviewerComponent {
   }
 
   goToUpdate(){
-    this._router.navigate(['maintenance/update']);
+    this._router.navigate(['maintenance']);
   }
 }

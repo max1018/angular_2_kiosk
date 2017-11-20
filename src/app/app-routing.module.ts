@@ -3,6 +3,8 @@
  */
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {RegisterComponent} from "./register/register.component";
+
 
 
 
@@ -27,6 +29,10 @@ const routes: Routes = [
   {
     path: 'maintenance',
     loadChildren: 'app/maintenance/maintenance.module#MaintenanceModule',
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   }
 ];
 @NgModule({

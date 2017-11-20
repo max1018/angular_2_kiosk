@@ -12,9 +12,10 @@ import {Config} from 'aws-sdk'
 var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east-2_ptjPC8qtX'});
 var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
+
 AWS.config.update({
-  accessKeyId: 'AKIAJYZEP6UOEP5HDCSQ',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIAIF2YWPBYXUNIVQWA',
+  secretAccessKey: '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',
   region: 'us-east-2'
 });
  let db: any;// = {
@@ -259,6 +260,7 @@ AWS.config.update({
 
 
 const dynamoDb = new DynamoDB.DocumentClient();
+
 @Injectable()
 export class Database {
 
@@ -396,6 +398,10 @@ export class Database {
 
   getAllItems(){
     return db.items;
+  }
+
+  getDB(){
+    return db;
   }
 }
 
