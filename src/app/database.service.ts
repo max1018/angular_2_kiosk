@@ -13,12 +13,9 @@ var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east
 var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
 
-AWS.config.update({
-  accessKeyId: 'AKIAIF2YWPBYXUNIVQWA',
-  secretAccessKey: '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',
-  region: 'us-east-2'
-});
- let db: any;// = {
+//Keys
+
+let db: any;// = {
 //   items: [{
 //     products: [
 //       {
@@ -279,11 +276,11 @@ export class Database {
         ":id": "201303190425"
       }
     }, function (err, data) {
-      console.log(err)
+      //console.log(err)
       if (!err) {
         console.log(data['Items'][0]);
-      db = data['Items'][0];
-      console.log(db)
+        db = data['Items'][0];
+        console.log(db)
       }
     })
   }
@@ -293,7 +290,7 @@ export class Database {
   }
 
   buy(item){
-  let expression = '';
+    let expression = '';
     for(let i = 0 ; i < db.items.length;i++){
       if(db.items[i].id == item.id && db.items[i].count > 0){
 
@@ -325,7 +322,7 @@ export class Database {
   }
 
   restock(item, restockNum: number){
-  let expression = '';
+    let expression = '';
     for(let i = 0 ; i < db.items.length;i++){
       if(db.items[i].id == item.id && db.items[i].count > 0){
 
@@ -357,7 +354,7 @@ export class Database {
   }
 
   changePrice(item, newPrice: number){
-  let expression = '';
+    let expression = '';
     for(let i = 0 ; i < db.items.length;i++){
       if(db.items[i].id == item.id && db.items[i].count > 0){
 
@@ -384,6 +381,23 @@ export class Database {
           else console.log(data);
         })
         console.log(i);
+      }
+    }
+  }
+
+  itemDivider(p1,p2,p3,p4){
+    for(let i = 0; i < db.items.length;i++ ){
+      if(i < 5){
+        p1.push(db.items[i]);
+      }
+      if(i >4 && i < 10){
+        p2.push(db.items[i]);
+      }
+      if(i >9 && i < 15){
+        p3.push(db.items[i]);
+      }
+      if(i >15 && i < 21){
+        p4.push(db.items[i]);
       }
     }
   }

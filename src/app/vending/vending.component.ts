@@ -36,7 +36,13 @@ export class VendingComponent {
   }
   constructor(private _dbService: Database) {
     //console.log(db.items[0])
-    setTimeout(5000000000000,this.itemDivider());
+
+    if(!db){
+      const db = this._dbService.getDB();
+      _dbService.itemDivider(this.products1,this.products2,this.products3,this.products4);
+    }else{
+      _dbService.itemDivider(this.products1,this.products2,this.products3,this.products4);
+    }
     console.log(this.products1);
     console.log(this.products2);
     console.log(this.products3);
@@ -53,21 +59,21 @@ export class VendingComponent {
    // this.totalCountForDay[this.selectedProduct.id] =
   }
 
-  itemDivider(){
-    for(let i = 0; i < db.items.length;i++ ){
-      if(i < 5){
-        this.products1.push(db.items[i]);
-      }
-      if(i >4 && i < 10){
-        this.products2.push(db.items[i]);
-      }
-      if(i >9 && i < 15){
-        this.products3.push(db.items[i]);
-      }
-      if(i >15 && i < 21){
-        this.products4.push(db.items[i]);
-      }
-    }
-  }
+  // itemDivider(p1,p2,p3,p4){
+  //   for(let i = 0; i < db.items.length;i++ ){
+  //     if(i < 5){
+  //       p1.push(db.items[i]);
+  //     }
+  //     if(i >4 && i < 10){
+  //       p2.push(db.items[i]);
+  //     }
+  //     if(i >9 && i < 15){
+  //       p3.push(db.items[i]);
+  //     }
+  //     if(i >15 && i < 21){
+  //       p4.push(db.items[i]);
+  //     }
+  //   }
+  // }
 
 }

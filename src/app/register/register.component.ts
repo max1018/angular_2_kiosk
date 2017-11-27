@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PersistenceService, StorageType} from "angular-persistence";
 import {UUID} from 'angular2-uuid';
+import {Observable} from 'rxjs/Observable';
 
 'use strict'
 var AWS = require('aws-sdk');
@@ -11,14 +12,10 @@ var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east
 var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
 
-AWS.config.update({
-  accessKeyId: 'AKIAIF2YWPBYXUNIVQWA',
-  secretAccessKey: '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',
-  region: 'us-east-2'
-});
+//Keys
 
 
-const dynamoDb = new DynamoDB.DocumentClient();
+const dynamoDb1 = new DynamoDB.DocumentClient();
 
 @Component({
   selector: 'app-register',
@@ -28,15 +25,19 @@ const dynamoDb = new DynamoDB.DocumentClient();
 
 
 export class RegisterComponent implements OnInit {
-  generateSafeId = require('generate-safe-id')
 
 
+accessKey:any;
 
-
-
+isRegFlag: boolean;
   constructor(private _perService: PersistenceService) {
-    // dynamoDb.
- // console.log(uuid)
+
+    if(this.accessKey =_perService.get("accessKey",StorageType.LOCAL)){
+      this.isRegFlag = true;
+    }
+    else{
+      this.isRegFlag = false;
+    }
   }
 
 
@@ -47,10 +48,27 @@ export class RegisterComponent implements OnInit {
   printHey(){
     let uuid = UUID.UUID();
     this._perService.set('accessKey',uuid, {type: StorageType.LOCAL});
+    this.createTable();
   }
 
   getHey(){
     console.log(this._perService.get('accessKey', StorageType.LOCAL));
   }
 
+  createTable(){
+    let params = {
+      "TableName":"kiosk_a",
+      "Item":{
+        kiosk_id:this._perService.get('accessKey', StorageType.LOCAL),
+        items:[{}]
+      }
+    }
+
+    dynamoDb1.put(params,function (err,data){
+      if(err)
+      console.log(err)
+      else
+       console.log(data);
+    })
+  }
 }

@@ -11,6 +11,8 @@ import {VendingComponent} from '../vending/vending.component'
 import {WebviewerComponent} from '../webViewer/webViewer.component';
 import { ModalComponent } from '../vending/model.component';
 import {KioskComponent} from './kiosk.component';
+// import { RegisterComponent } from '../register/register.component';
+
 
 @NgModule({
   imports: [
@@ -24,7 +26,8 @@ import {KioskComponent} from './kiosk.component';
     VendingComponent,
     WebviewerComponent,
     ModalComponent,
-    KioskComponent
+    KioskComponent,
+    // RegisterComponent
   ],
 })
 export class KioskModule { }

@@ -65,4 +65,8 @@ confirm(){
     alert("You have successfully switched items");
 }
 
+  back(){
+  this._router.navigate(['maintenance/update']);
+}
+
 }
