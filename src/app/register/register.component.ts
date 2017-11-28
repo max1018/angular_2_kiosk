@@ -7,13 +7,13 @@ import {Observable} from 'rxjs/Observable';
 var AWS = require('aws-sdk');
 import {DynamoDB} from 'aws-sdk';
 import {Config} from 'aws-sdk'
+import {Router} from "@angular/router";
 
 var myCredentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east-2_ptjPC8qtX'});
 var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
 
 //Keys
-
 
 const dynamoDb1 = new DynamoDB.DocumentClient();
 
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 accessKey:any;
 
 isRegFlag: boolean;
-  constructor(private _perService: PersistenceService) {
+  constructor(private _perService: PersistenceService, private _router:Router) {
 
     if(this.accessKey =_perService.get("accessKey",StorageType.LOCAL)){
       this.isRegFlag = true;
@@ -53,6 +53,10 @@ isRegFlag: boolean;
 
   getHey(){
     console.log(this._perService.get('accessKey', StorageType.LOCAL));
+  }
+
+  goBack(){
+    this._router.navigateByUrl('maintenance/update')
   }
 
   createTable(){

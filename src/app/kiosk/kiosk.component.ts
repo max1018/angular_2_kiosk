@@ -20,7 +20,7 @@ export class KioskComponent {
 
 
   navToRegister(){
-    this._router.navigate(['register']);
+    this._router.navigate(['maintanence']);
   }
 
 }

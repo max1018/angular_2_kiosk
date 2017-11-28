@@ -12,6 +12,7 @@ var AWS = require('aws-sdk');
 
 //Keys
 
+
 let s3 = new AWS.S3({'Bucket':"kiosk-pictures","region":"us-east-2"});
 @Component({
   selector: 'app-root',

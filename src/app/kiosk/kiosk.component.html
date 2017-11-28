@@ -6,7 +6,7 @@
   <ads style="height: 33%; max-width: 2vw"></ads>
 </div>
 
-<div *ngIf="!accessKey">
+<div *ngIf="!accessKey" (scroll)="false">
   <div class="row" style="background-color: midnightblue; color: midnightblue; height: 50px"></div>
   <div class="row" style="margin-top: 100px">
     <div class="col-md-offset-4 col-md-5">
@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" (scroll)="false">
     <div class="col-md-offset-4 col-md-5">
       <button class="btn btn-success" (click)="navToRegister()">Register Device</button>
     </div>

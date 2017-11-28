@@ -12,11 +12,11 @@
     <!--<div class="col-md-3">-->
       <!--<button style="height: 50px; width: 100%" class="btn btn-success">Login</button>-->
     <!--</div>-->
-    <!--<div class="col-md-3">-->
-      <!--<button style="height: 50px; width: 100%" class="btn btn-danger">Logout</button>-->
-    <!--</div>-->
     <div class="col-md-3">
       <button style="height: 50px; width: 100%" class="btn btn-info">Device Info</button>
+    </div>
+    <div class="col-md-3">
+      <button style="height: 50px; width: 100%" class="btn btn-danger" (click)="navToRegistery()">Register Device</button>
     </div>
   </div>
   <div class="products">
@@ -154,16 +154,16 @@ This will be the modal that the maintenance guy options come from such as exchan
     </div>
   </div>
   <div class="app-modal-footer">
-    <!--<div class="row">-->
-      <!--<div class="col-md-12">-->
-        <!--<button class="btn btn-info btn-block" (click)="updateStock.show()">Update Stock</button>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="row">-->
-      <!--<div class="col-md-12">-->
-        <!--<button class="btn btn-info btn-block" (click)="changePrice.show()">Change Price</button>-->
-      <!--</div>-->
-    <!--</div>-->
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-info btn-block" (click)="updateStock.show()">Update Stock</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-info btn-block" (click)="changePrice.show()">Change Price</button>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <button class="btn btn-info btn-block" (click)=" navToStats(selectedProduct.id)">Check Statistics</button>

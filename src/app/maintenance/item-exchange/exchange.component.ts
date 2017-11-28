@@ -32,7 +32,7 @@ location = {row:'',col:''};
 
   parseLocation(){
     let loc = this.selectedProduct.location.toString();
-    console.log(loc.substring(2,3));
+   // console.log(loc.substring(2,3));
     this.location.col = loc.substring(2,3);
     this.location.row = loc.substring(0,1);
   }

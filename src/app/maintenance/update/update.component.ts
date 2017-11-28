@@ -124,4 +124,8 @@ export class UpdateComponent {
     }
   }
 
+  navToRegistery(){
+    this._router.navigate(['register'])
+  }
+
 }
