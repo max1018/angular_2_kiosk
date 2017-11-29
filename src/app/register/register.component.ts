@@ -47,15 +47,20 @@ isRegFlag: boolean;
 
   printHey(){
     let uuid = UUID.UUID();
-    this._perService.set('accessKey',uuid, {type: StorageType.LOCAL});
+     this._perService.set('accessKey',uuid, {type: StorageType.LOCAL});
     this.createTable();
+    alert("Successfully Registered Device");
+    this.goBack();
   }
 
   getHey(){
-    console.log(this._perService.get('accessKey', StorageType.LOCAL));
+    let ak = this._perService.get('accessKey', StorageType.LOCAL);
+     this._perService.remove('accessKey',StorageType.LOCAL);
+
   }
 
   goBack(){
+
     this._router.navigateByUrl('maintenance/update')
   }
 

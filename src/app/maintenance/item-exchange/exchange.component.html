@@ -1,13 +1,14 @@
-<div class="container-fluid">
+<div class="col-md-12">
   <h1 style="border-bottom: 2px solid black">Switch Items</h1>
 
   <div class="row">
-    <div class="app align-items-center">
+    <div class="app align-items-center">\
+      <p>These are the current item in your inventory. Please select an item.</p>
       <div>
         <div class="card-deck row">
           <div class="col-md-2" *ngFor="let item of allItems" style="margin-top: 20px;">
             <div class="card">
-              <button style="background: none;border: none;max-width: 150px;min-height: 50px;max-height: 50px"><img style="max-width: 150px;min-height: 50px;max-height: 50px" src={{item.picture}} (click)="onSelect(item)"></button>
+              <button style="background: none;border: none;max-width: 150px;min-height: 50px;max-height: 50px" (click)="onSelect(item)"><img style="max-width: 150px;min-height: 50px;max-height: 50px" src={{item.picture}}></button>
             </div>
           </div>
         </div>
@@ -39,7 +40,7 @@
         <button class="btn" style="width: 100%;height: 75px;" (click)="switchButton()" *ngIf="!switchFlag">Switch</button>
       </div>
       <div class="row" style="margin-top: 30px" *ngIf="switchFlag">
-        <button class="btn" style="width: 100%; height: 75px; background-color: lawngreen;" (click)="confirm()">Confrim</button>
+        <button class="btn" style="width: 100%; height: 75px; background-color: lawngreen;" (click)="confirm()">Confirm</button>
       </div>
       <div class="row" style="margin-top: 30px" *ngIf="switchFlag" (click)="cancel()">
         <button class="btn" style="width: 100%; height: 75px; background-color: orange; font-size: larger;">Cancel</button>

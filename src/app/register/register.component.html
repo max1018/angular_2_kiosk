@@ -9,14 +9,14 @@
   <div *ngIf="!isRegFlag">
 
     <div class="row" style="margin-top: 50px;">
-      <div class="col-md-offset-4 col-md-9">
+      <div class="col-md-offset-3 col-md-9">
         <p style="margin-left: 25px">Your device is currently not registered with our systems.</p>
       </div>
     </div>
 
     <div class="row" style="margin-top: 50px">
       <div class="col-md-offset-5 col-md-3">
-        <button class="btn btn-block btn-info" style="margin-left: -40px">Register Device</button>
+        <button class="btn btn-block btn-info" style="margin-left: -40px" (click)="printHey()">Register Device</button>
       </div>
     </div>
   </div>
