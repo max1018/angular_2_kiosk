@@ -15,6 +15,7 @@ var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 
 //Keys
 
+
 const dynamoDb1 = new DynamoDB.DocumentClient();
 
 @Component({
