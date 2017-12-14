@@ -14,6 +14,11 @@ var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
 
 //Keys
+AWS.config.update({
+  accessKeyId: 'AKIAJGA75R3GPAMNJZZQ',
+  secretAccessKey: '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',
+  region: 'us-east-2'
+})
 
 
 const dynamoDb1 = new DynamoDB.DocumentClient();

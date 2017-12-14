@@ -14,6 +14,11 @@ var myConfig = new Config({credentials: myCredentials, region: 'us-east-2'});
 //
 
 //Keys
+AWS.config.update({
+  accessKeyId: 'AKIAJGA75R3GPAMNJZZQ',
+  secretAccessKey: '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',
+  region: 'us-east-2'
+})
 
 
 let db: any;// = {
@@ -389,13 +394,13 @@ export class Database {
 
   itemDivider(p1,p2,p3,p4){
     for(let i = 0; i < db.items.length;i++ ){
-      if(i < 5){
+      if(i < 4){
         p1.push(db.items[i]);
       }
-      if(i >4 && i < 10){
+      if(i >3 && i < 8){
         p2.push(db.items[i]);
       }
-      if(i >9 && i < 15){
+      if(i >8 && i < 13){
         p3.push(db.items[i]);
       }
       if(i >15 && i < 21){

@@ -11,6 +11,11 @@ import * as uuid from 'uuid'
 var AWS = require('aws-sdk');
 
 //Keys
+AWS.config.update({
+  accessKeyId: 'AKIAJGA75R3GPAMNJZZQ',
+  secretAccessKey: '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',
+  region: 'us-east-2'
+})
 
 
 let s3 = new AWS.S3({'Bucket':"kiosk-pictures","region":"us-east-2"});

@@ -1,6 +1,6 @@
 img{
-  height: 100%;
-  width: 101%;
+  height: 55%;
+  width: 45%;
 }
 
 .container{
@@ -34,9 +34,9 @@ img{
 button{
   color: black;
   font-size: x-large;
-  height: 125px;
+  height: 140px;
   width: 5000px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .btn-block{

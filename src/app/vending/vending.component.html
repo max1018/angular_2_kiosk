@@ -1,38 +1,41 @@
-  <div class="container" style="height: 100%; width: 100%; margin-top: 0px;background-color: whitesmoke">
+  <div class="container" style="height: 100%; width: 100%; margin-top: 0px;background-color: white">
     <div class="products" style="margin-top: -12px">
       <div class="row-md" style="margin-left: 0px; background-color: lightblue">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div *ngFor="let product of products1"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-              <img src="{{product.picture}}">
+            <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" >
+              <img class="vend-item" src="{{product.picture}}">
             </button>
+            <!--<p>{{product.price}}</p>-->
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <div *ngFor="let product of products2"
                [class.selected]="product === selectedProduct">
-            <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-              <img src="{{product.picture}}">
+            <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" >
+              <img class="vend-item" src="{{product.picture}}">
+              <!--<p>{{product.price}}</p>-->
             </button>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div *ngFor="let product of products3"
              [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-            <img src="{{product.picture}}">
+          <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail">
+            <img class="vend-item" src="{{product.picture}}">
+            <!--<p>{{product.price}}</p>-->
           </button>
         </div>
       </div>
-      <div class="col-md-3">
-        <div *ngFor="let product of products4"
-             [class.selected]="product === selectedProduct">
-          <button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">
-            <img src="{{product.picture}}">
-          </button>
-        </div>
-      </div>
+      <!--<div class="col-md-3">-->
+        <!--<div *ngFor="let product of products4"-->
+             <!--[class.selected]="product === selectedProduct">-->
+          <!--<button (click)="onSelect(product)" (click)="printhey(product)" (click)="modal1.showMenu(selectedProduct, modal1, modal5)" class="img-thumbnail" style="width: 100%">-->
+            <!--<img src="{{product.picture}}">-->
+          <!--</button>-->
+        <!--</div>-->
+      <!--</div>-->
       <!--<div class="col-md-2">-->
         <!--<div *ngFor="let product of products5"-->
              <!--[class.selected]="product === selectedProduct">-->
@@ -63,7 +66,7 @@
     </div>
     <div class="app-modal-body">
       <div class="row">
-        <div class="row-md-2 align-content-center"><img src={{selectedProduct.picture}}>
+        <div class="row-md-2 align-content-center"><img style="margin-left: 100px" src={{selectedProduct.picture}}>
         </div>
       </div>
       <div class="row">
